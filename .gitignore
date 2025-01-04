@@ -1,0 +1,24 @@
+# Lokálne Terraform stavy a zálohy
+*.tfstate
+*.tfstate.*
+
+# Crash logy Terraformu
+crash.log
+
+# Záložné súbory vytvorené Terraformom
+*.backup
+
+# Konfiguračné súbory s citlivými údajmi
+.terraformrc
+terraform.rc
+
+# Zložka s Terraform pluginmi a cache
+.terraform/
+
+# Súčasti lokálneho IDE alebo editorov (napr. VSCode, IntelliJ)
+*.idea/
+*.vscode/
+*.DS_Store
+
+# Výstupy príkazov alebo logy
+*.log

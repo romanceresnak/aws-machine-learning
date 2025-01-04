@@ -12,3 +12,13 @@ variable "default_created_by" {
   description = "Default value to be used in resources' CreatedBy tag."
   default     = "romanceresnak_terraform"
 }
+
+variable "firehose_policy_name" {
+  description = "Policy name for the kinensis firehouse"
+  default     = "firehose_policy"
+}
+
+variable "kinesis_firehose_prefix" {
+  description = "Kinesis Firehose prefix for delivery of processed events."
+  default     = "fraud-detection/firehose/"
+}
