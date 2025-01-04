@@ -42,6 +42,8 @@ resource "aws_iam_policy" "firehose_policy" {
                 "s3:PutObject"
             ],
             "Resource": [
+                "arn:aws:s3:::${var.s3_bucket_2.id}",
+                "arn:aws:s3:::${var.s3_bucket_2.id}/${var.kinesis_firehose_prefix}*"
             ]
         }
     ]
@@ -53,6 +55,3 @@ resource "aws_iam_role_policy_attachment" "firehose_policy_role" {
   role = aws_iam_role.fraud_detection_firehose_role.name
   policy_arn = aws_iam_policy.firehose_policy.arn
 }
-
-//                "arn:aws:s3:::${aws_s3_bucket.s3_bucket_2.id}",
-//                "arn:aws:s3:::${aws_s3_bucket.s3_bucket_2.id}/${var.kinesis_firehose_prefix}*"
